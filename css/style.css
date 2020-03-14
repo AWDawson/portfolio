@@ -1,15 +1,40 @@
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
 
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+}
 
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body{
   background-color: #ddd;
-  font-family: 'Open Sans';
+  font-family: Poppins-Regular;;
   font-size: 24px;
   margin: 0;
   padding: 0;
+}
+
+body.contact{
+  background-color: #fff;
 }
 
 h1{
@@ -17,23 +42,37 @@ h1{
   line-height: 1;
   padding: 50px 0;
   text-align: center;
+  font-family: Poppins-SemiBold;
 }
 
 h2{
+  color: #fff;
   font-size: 32px;
   line-height: 1.5;
+  text-align: center;
+}
+
+nav{
+  /* background-color: #ddd; */
+  text-align: left;
+  padding: 35px 35px;
+  align-self: center;
 }
 
 nav li{
   display:inline;
   padding-right:20px;
+}
 
+nav li a.right{
+  float: right;
 }
 
 nav a{
-  color: #000;
+  color: white;
   font-weight: bold;
-  text-decoration: none; 
+  text-decoration: none;
+  font-family: Poppins-Bold;
 }
 
 nav a:hover{
@@ -57,10 +96,6 @@ nav a:hover{
 .skip a:focus{
   top:0px;
 }
-
-/*Your code here*/
-/*Add the selector and rule to move the skip 
-link to the exact top of the page.*/
  
 
 *:focus{
@@ -76,131 +111,247 @@ footer{
   text-align: center;
 }
 
-nav{
-  background-color: #ddd;
-  padding: 20px 0; 
-  text-align: left;
-
-  /*Your code here*/
-  /*Span the top row*/
-  grid-column: 1 / -1;
-  grid-row: 1 / span 1;
-}
-
-header{
+.intro{
   /* background-attachment: fixed; Parallax effect      */
   /* background-position: center;  Parallax effect */
   /* background-repeat: no-repeat; Parallax effect */
-  /* background-size: cover;       Parallax effect */
-  color: black;
+  background-size: cover;       /*Parallax effect*/
+  color: white;
   height: 1000px;                /* Parallax effect */
   background-color: #000;
-  /* Your code here */
-  /* Set background-image to header.jpg in the images folder */
-  /* Span one row */
   grid-column: 1 / -1;
-  grid-row: 2 / span 1;
-  background-image: url('../images/sunset.jpeg');
+  grid-row: 1 / span 1;
+  background-image: url('../images/sunset2.jpeg');
+}
+
+header h1{
+  font-size: 60px;
 }
 
 header p{
-  color: black;
-  font-size: 24px;
+  color: white;
+  font-size: 28px;
   padding: 0 100px;
   text-align: center;
 }
 
-
 .container{
-  /*Your code here  */
-  /* See documentation for mobile view */
   display: grid;
-  grid-template-columns: 100px 400px 100px;
-  grid-template-rows: 30px auto auto auto auto auto 100px;
-  row-gap: 15px;
-}
-.about, .method, .clients, .contact{
-  /*Your code here */
-  /* See documentation for mobile view */
-  grid-column: 2 / span 1;
-}
-
-.about-image, .method-image, .clients-image, .contact-image{
-   /*Your code here */
-   /* See documentation for mobile view */
-  grid-column: 1 / -1;
-  max-height: 700px;
-  overflow: hidden;
-
-}
-
-.about, .about-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-  grid-row: 3 / span 1;
-}
-
-.method, .method-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-  grid-row: 4 / span 1;
-}
-
-
-.clients, .clients-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-  grid-row: 5 / span 1;
-}
-
-
-.contact, .contact-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-  grid-row: 6 / span 1;
+  grid-template-columns: auto 600px auto;
+  /* grid-template-rows: 70px 400px 400px 400px 400px 400px 100px; */
 }
 
 .text-block{
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid #000;
   padding: 30px;
-  /*Your code here:*/
-  /*Align the content in the center */
   align-self: center;
+}
+
+li.right{
+  float: right;
+}
+
+/*==================================================================
+[ Contact Page ]*/
+
+.contactContainer{
+  display: grid;
+  grid-template-columns: auto 600px auto;
+  /* grid-template-rows: 70px 400px 400px 400px 400px 400px 100px; */
+}
+
+.wrap-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 1170px; */
+  background: #fff;
+  /* border: 1px black solid; */
+  /* border-radius: 10px; */
+  padding: 82px 180px 33px 180px;
+  position: relative;
+}
+
+.wrap-input {
+  width: 100%;
+  position: relative;
+  /* border-bottom: 2px solid #d9d9d9; */
+  padding-bottom: 13px;
+  margin-bottom: 65px;
+}
+
+.rs1-wrap-input {
+  width: calc((100% - 100px) / 2);
+}
+
+nav.contact a{
+  color: #000;
+}
+
+label{
+  display: block;
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  padding-left: 5px;
+  font-family: Poppins-Regular;
+}
+
+fieldset{
+  border-radius: 10px;
+}
+
+.contactForm{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-title {
+  display: block;
+  width: 100%;
+  font-size: 39px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: left;
+  padding-bottom: 44px;
+  font-family: Poppins-Bold;
 }
 
 
 
-@media all and (min-width: 800px){
+input[type=text], input[type=submit], select{
+  display: block;
+  background: transparent;
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 30px;
+  padding: 8px 12px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border-radius: 4px;
+  font-size: 16px;
+  /* color: #555; */
+  line-height: 1.2;
+  font-family: Poppins-SemiBold;
+}
 
+textarea{
+  width: 600px;
+  height: 100px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  font-family: Poppins-SemiBold;
+}
+
+input, textarea, select{
+  background-color:#FFFFFF;
+}
+
+input:focus{
+  border: 2px solid black;
+}
+
+/*==================================================================
+[ Button ]*/
+
+.container-contact100-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -25px;
+}
+
+.contact100-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 160px;
+  height: 50px;
+  background-color: #ff4b5a;
+  border-radius: 25px;
+
+  font-family: Poppins-Medium;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5); 
+  -moz-box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+  -ms-box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+}
+
+.contact100-form-btn i {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact100-form-btn:hover {
+  background-color: #333333;
+  box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+  -ms-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+}
+
+.contact100-form-btn:hover i {
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+
+
+@media all and (max-width: 800px){
+  nav li a.right{
+    float: none;
+  }
+
+  nav {
+    text-align: center;
+  }
   .container{
-  /*Your code here */
-  /* See documentation for desktop view */ 
-    grid-template-columns: 50px auto 500px auto 50px;
-    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
+    grid-template-rows: auto 100px;
+    row-gap: 15px;
+  }
+/*==================================================================
+[ Contact Page ]*/  
+  .rs1-wrap-input {
+    width: 100%;
   }
 
-  nav{
-    background-color: #ddd;
-    text-align: right;
-    padding: 35px 0px;
-    align-self: center;
-  }
+}
 
-  .about, .clients, .method-image, .contact-image{
-  /*Your code here */
-  /* See documentation for desktop view */ 
-    grid-column: 3 / span 2;
-  }
-
-  .about-image, .clients-image, .method, .contact{
-    /*Your code here */
-    /* See documentation for desktop view */ 
-      grid-column: 2 / span 2;
-    }
-
-
-}  /*End the media query*/
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
