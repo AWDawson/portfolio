@@ -242,7 +242,7 @@ input[type=text], input[type=submit], select{
 }
 
 textarea{
-  width: 600px;
+  width: 100%;
   height: 100px;
   padding: 8px 12px;
   border-radius: 4px;
@@ -348,6 +348,10 @@ input:focus{
 [ Contact Page ]*/  
   .rs1-wrap-input {
     width: 100%;
+  }
+
+  .wrap-contact {
+    padding: 20px 60px 20px;
   }
 
 }
