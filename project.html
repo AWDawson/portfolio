@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/af4b5c6973.js" crossorigin="anonymous"></script>
     <title>Shujie Yang</title>
   </head>
   <body>
@@ -17,16 +18,125 @@
           <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="project.html">Project</a></li>
+          <li><a class="current" href="project.html">Project</a></li>
           <li><a href="life.html">Life</a></li>
           <li><a href="contact.html" class="right">Contact</a></li>
           </ul>
         </nav>
       </div>
 
+      <div class="projectContent">
+
+        <div class="heading">
+          <h2 class="black">My work</h2>
+          <p>Here's a list of most of the projects I've been working on lately. Because
+            of my broad interests, the topics include computer vision,
+            natural language processing, information retrieval, time series analysis, data visualization 
+            and mobile app development.
+          </p>
+        </div>
+
+        <div class="projectContainer">
+
+          <div class="projectCard">
+            <a class="projectLink">
+              <img class="projectImg" src="images/project/ozone.png" alt="">
+            </a>
+            <div class="projectDetails" href="#">
+              <div class="projectTitle">
+  
+                <div class="icons">
+                  <i class="fab fa-r-project"></i>
+                </div>
+                <h2 class="projectName">
+                  A statistical model for ozone concentration in Ann Arbor
+                </h2>
+                <small>
+                  Built using R Studio
+                </small>
+              </div>
+              <p>
+                Ozone concentration is an important factor when considering the air quality. 
+                This project employed time series analysis methods to invesigate how the ozone concentration 
+                varied in Ann Arbor during the last year. 
+
+              </p>
+            </div>
+          </div>
+
+          <div class="projectCard">
+            <a class="projectLink">
+              <img class="projectImg" src="images/project/nlp.png" alt="">
+            </a>
+            <div class="projectDetails" href="#">
+              <div class="projectTitle">
+
+                <div class="icons">
+                  <i class="fab fa-python"></i>
+                </div>
+                <h2 class="projectName">
+                  Missing Step Inference in Procedure Texts
+                </h2>
+                <small>
+                  Built using Python
+                </small>
+              </div>
+              <p>
+                This paper proposes a missing step generator based on contextual information. 
+                The model is trained on the YouCookII dataset.
+              </p>
+            </div>
+          </div>
+
+          <div class="projectCard">
+            <a class="projectLink">
+              <img class="projectImg" src="images/project/game.png" alt="">
+            </a>
+            <div class="projectDetails" href="#">
+              <div class="projectTitle">
+
+                <div class="icons">
+                  <!-- <i class="fab fa-r-project"></i> -->
+                  <i class="fab fa-python"></i>
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-css3-alt"></i>
+                  <!-- <i class="fab fa-java"></i> -->
+                </div>
+                <h2 class="projectName">
+                  Vertical Steam Game Search Engine
+                </h2>
+                <small>
+                  Built using Python, Django, Html, Css
+                </small>
+              </div>
+              <p>
+                This is a web-interface based search platform speciﬁc on game search with vague descriptions.
+                In addition to basic search, we also integrated static ranking, 
+                ﬁlter on dislike, pseudo relevance feedback, spell correction, and query suggestion.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
       
       <footer>
-      <p>&copy; 2020 Shujie Yang. All rights reserved.</p>
+        <div class="footerContent">
+          <p>&copy; 2020 Shujie Yang. All rights reserved.</p>
+
+            <ul class="social-networks square spin-icon">
+              <li><a href="https://www.linkedin.com/" class="icon-linkedin">LinkedIn</a></li>
+              <!-- <li><a href="https://twitter.com/" class="icon-twitter">Twitter</a></li> -->
+              <!-- <li><a href="https://www.facebook.com/" class="icon-facebook">Facebook</a></li> -->
+              <!-- <li><a href="https://twitch.tv" class="icon-twitch">Twitch</a></li> -->
+              <li><a href="https://github.com/AWDawson" class="icon-github">GitHub</a></li>
+              <!-- <li><a href="https://pinterest.com" class="icon-pinterest">Pinterest</a></li> -->
+              <li><a href="https://www.instagram.com/awdawson_/" class="icon-instagram">Instagram</a></li>
+              <!-- <li><a href="https://vimeo.com" class="icon-vimeo">Vimeo</a></li> -->
+            </ul>
+          </div>
       </footer>
 
     </main>
