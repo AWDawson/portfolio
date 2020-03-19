@@ -26,8 +26,8 @@ html{
 }
 
 body{
-  background-color: #fff;
-  font-family: Poppins-Regular;;
+  background-color: #fafaf5;
+  font-family: Montserrat, Poppins-Regular;;
   font-size: 24px;
   margin: 0;
   padding: 0;
@@ -48,7 +48,7 @@ h1{
   line-height: 1;
   padding: 50px 0;
   text-align: center;
-  font-family: Poppins-Regular;
+  font-family: Montserrat, Poppins-Regular;
 }
 
 h2{
@@ -79,7 +79,7 @@ nav a{
   color: white;
   font-weight: bold;
   text-decoration: none;
-  font-family: Poppins-Regular;
+  font-family: Montserrat, Poppins-Regular;
 }
 
 nav a:hover{
@@ -127,13 +127,15 @@ footer{
 }
 
 .intro{
-  /* background-attachment: fixed; Parallax effect      */
-  /* background-position: center;  Parallax effect */
-  /* background-repeat: no-repeat; Parallax effect */
-  /* background-size: cover;       Parallax effect */
-  color: #fff;
-  /* height: 1000px;                Parallax effect */
+  /* Parallax effect */
+  /* background-attachment: fixed; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;     
+  height: 1000px;  */
+  /* Parallax effect */
   /* background-color: #000; */
+  color: #fff;
   grid-column: 1 / -1;
   grid-row: 1 / span 1;
   /* background-image: url('../images/sunset2.jpeg'); */
@@ -166,6 +168,45 @@ header p{
 li.right{
   float: right;
 }
+
+/*==================================================================
+[ Landing Page ]*/
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+#large-header {
+	background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+}
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.demo-canvas .main-title {
+	text-transform: uppercase;
+	font-size: 4.2em;
+	letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+	font-weight: 200;
+}
+
 
 /*==================================================================
 [ Contact Page ]*/
@@ -215,7 +256,7 @@ label{
   font-size: 18px;
   line-height: 1.5;
   padding-left: 5px;
-  font-family: Poppins-Regular;
+  font-family: Montserrat, Poppins-Regular;
 }
 
 fieldset{
@@ -228,6 +269,13 @@ fieldset{
   justify-content: space-between;
 }
 
+.contactForm p{
+  margin: 0 100px 25px 0;
+  line-height: 1.2;
+}
+
+
+
 .form-title {
   display: block;
   width: 100%;
@@ -235,8 +283,9 @@ fieldset{
   color: #333333;
   line-height: 1.2;
   text-align: left;
+  padding-top: 50px;
   padding-bottom: 44px;
-  font-family: Poppins-Bold;
+  font-family: Montserrat, Poppins-Bold;
 }
 
 
@@ -244,7 +293,7 @@ fieldset{
 input[type=text], input[type=submit], select{
   display: block;
   background: transparent;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   width: 100%;
   height: 30px;
   padding: 8px 12px;
@@ -255,7 +304,7 @@ input[type=text], input[type=submit], select{
   font-size: 16px;
   /* color: #555; */
   line-height: 1.2;
-  font-family: Poppins-SemiBold;
+  font-family: Montserrat, Poppins-SemiBold;
 }
 
 textarea{
@@ -267,7 +316,7 @@ textarea{
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  font-family: Poppins-SemiBold;
+  font-family: Montserrat, Poppins-SemiBold;
 }
 
 input, textarea, select{
@@ -276,6 +325,20 @@ input, textarea, select{
 
 input:focus{
   border: 2px solid black;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../images/road2.jpg");
+
+  /* Full height */
+  height: 600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*==================================================================
@@ -307,7 +370,7 @@ input:focus{
   /* background-color: #33B8FF; */
   border-radius: 25px;
 
-  font-family: Poppins-Medium;
+  font-family: Montserrat, Poppins-Medium;
   font-size: 18px;
   color: #fff;
   line-height: 1.2;
@@ -357,6 +420,7 @@ nav.life a{
 
 h2.black {
   color: #000;
+  font-family: Montserrat;
 }
 
 .gallery{
@@ -488,10 +552,218 @@ img.rounded-circle{
 }
 
 nav a.current{
-  font-family: Poppins-Bold;
+  font-family: Montserrat, Poppins-Bold;
   /* color: #ff4b5a; */
   /* color: #33B8FF; */
   color: #3f729b;
+  text-decoration: underline;
+}
+
+/*==================================================================
+[ Skill ]*/
+
+.skillContent small{
+  font-style: italic;
+  font-size: 80%;
+}
+
+.skillContent p{
+  padding: 10px 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.skillContainer {
+  width: 80%;
+  /* max-width: 600px; */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.skillContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+  float: left;
+  padding: 30px 0 30px;
+}
+.col {
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+}
+
+#skill {
+  list-style: none;
+  padding-top: 30px;
+}
+
+#skill li {
+  margin-bottom: 50px;
+  background: #333;
+  height: 15px;
+  border-radius: 10px;
+  border: 2px solid #222;
+}
+
+#skill li em {
+  position: relative;
+  top: -30px;
+  font-style: normal;
+  font: 16px "Roboto Slab", sans-serif;
+  font-weight: 300;
+}
+
+.expand {
+  height: 10px;
+  /* margin: 2px; */
+  border-radius: 10px;
+  background: linear-gradient(to right, #77aef5 0%, #3550e9 100%);
+  position: absolute;
+  box-shadow: 0px 0px 3px 1px rgba(84, 130, 162, 0.6);
+}
+
+.cpp {
+  width: 90%;
+  -moz-animation: cpp 2s ease-out;
+  -webkit-animation: cpp 2s ease-out;
+}
+.python {
+  width: 90%;
+  -moz-animation: python 2s ease-out;
+  -webkit-animation: python 2s ease-out;
+}
+.web {
+  width: 70%;
+  -moz-animation: web 2s ease-out;
+  -webkit-animation: web 2s ease-out;
+}
+.r {
+  width: 60%;
+  -moz-animation: r 2s ease-out;
+  -webkit-animation: r 2s ease-out;
+}
+.matlab {
+  width: 60%;
+  -moz-animation: matlab 2s ease-out;
+  -webkit-animation: matlab 2s ease-out;
+}
+.java {
+  width: 30%;
+  -moz-animation: java 2s ease-out;
+  -webkit-animation: java 2s ease-out;
+}
+
+@-moz-keyframes cpp {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-moz-keyframes python {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-moz-keyframes web {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes r {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@-moz-keyframes matlab {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@-moz-keyframes java {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@-webkit-keyframes cpp {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes python {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes web {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes r {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@-webkit-keyframes matlab {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@-webkit-keyframes java {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+/*==================================================================
+[ Course ]*/
+
+.courseList{
+  margin-left: 150px;
+}
+
+.courseList li{
+  margin: 20px 0;
+  font-size: 80%;
 }
 
 /*==================================================================
@@ -768,6 +1040,12 @@ nav a.current{
   img.rounded-circle{
     margin: auto;
   }
+
+/*==================================================================
+[ Course ]*/ 
+  .courseList{
+    margin-left: 50px;
+  }
 /*==================================================================
 [ Project ]*/  
   .projectCard{
@@ -778,7 +1056,9 @@ nav a.current{
   }
 }
 
+
 @media all and (max-width: 800px){
+
   body#index-body{
     background-image: url("../images/background-2.jpeg");
   }
@@ -803,6 +1083,10 @@ nav a.current{
   .wrap-contact {
     padding: 20px 60px 20px;
   }
+
+  .parallax{
+    height: 400px;
+  }
 /*==================================================================
 [ Gallery ]*/  
 
@@ -819,6 +1103,37 @@ nav a.current{
 
   .projectContent{
     padding: 0;
+  }
+/*==================================================================
+[ About ]*/ 
+  .aboutContainer{
+    margin: 20px 0px 0px;
+  }
+
+  .aboutText{
+    margin: 10px;
+  }
+/*==================================================================
+[ Skill ]*/ 
+  .skillContent{
+    grid-template-columns: 1fr;
+  }
+/*==================================================================
+[ Course ]*/ 
+  .courseList{
+    margin-left: 30px;
+    text-align: center;
+  }
+  .course{
+    margin-top: 30px;
+  }
+/*==================================================================
+[ Footer ]*/ 
+  .footerContent{
+    padding: 33px 50px;
+  }
+  .footerContent p{
+    font-size: 16px;
   }
 }
 
